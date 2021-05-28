@@ -1,6 +1,6 @@
-# YouTube Watch Later Playlist
+# YouTube Playlist
 
-update videos url in watch later playlist to open a video without the playlist
+update videos url in a playlist to open a video without the playlist
 
 ## License
 

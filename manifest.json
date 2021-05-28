@@ -1,9 +1,9 @@
 {
-    "name": "YouTube Watch Later Playlist",
+    "name": "YouTube Playlist",
     "action": {},
     "manifest_version": 3,
     "version": "0.1",
-    "description": "update videos url in watch later playlist to open a video without the playlist",
+    "description": "update videos url in a playlist to open a video without the playlist",
     "permissions": [
         "activeTab",
         "scripting"
