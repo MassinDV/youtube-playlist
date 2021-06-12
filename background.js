@@ -1,12 +1,15 @@
-function updateUrls () {
+function updateUrls (listName) {
+    console.log('start updating');
+
     [...document.querySelectorAll('a#thumbnail')].map(item => {
-        item.href = item.href.split('list=WL')[0]
+        item.href = item.href.split(`list=${listName}`)[0]
     })
+
+    console.log('finish updating');
 }
 
-chrome.action.onClicked.addListener((tab) => {
-    chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: updateUrls
-    })
-})
+window.onload = function () {
+    const listName = new URLSearchParams(window.location.search).get('list');
+
+    setInterval(() => updateUrls(listName), 10000)
+}
