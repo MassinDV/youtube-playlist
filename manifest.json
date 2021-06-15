@@ -8,12 +8,12 @@
         "tabs"
     ],
     "host_permissions": [
-        "*://*.youtube.com/playlist*"
+        "*://*.youtube.com/*"
     ],
     "content_scripts": [
         {
             "matches": [
-                "*://*.youtube.com/playlist*"
+                "*://*.youtube.com/*"
             ],
             "js": [
                 "background.js"
