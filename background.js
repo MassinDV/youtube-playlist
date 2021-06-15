@@ -1,5 +1,7 @@
-function updateUrls (listName) {
+function updateUrls () {
     console.log('start updating');
+
+    const listName = new URLSearchParams(window.location.search).get('list');
 
     [...document.querySelectorAll('a#thumbnail')].map(item => {
         item.href = item.href.split(`list=${listName}`)[0]
@@ -9,7 +11,5 @@ function updateUrls (listName) {
 }
 
 window.onload = function () {
-    const listName = new URLSearchParams(window.location.search).get('list');
-
-    setInterval(() => updateUrls(listName), 10000)
+    setInterval(() => updateUrls(), 10000)
 }
