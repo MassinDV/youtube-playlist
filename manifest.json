@@ -4,20 +4,12 @@
     "manifest_version": 3,
     "version": "0.1",
     "description": "update videos url in a playlist to open a video without the playlist",
-    "permissions": [
-        "tabs"
-    ],
-    "host_permissions": [
-        "*://*.youtube.com/*"
-    ],
+    "permissions": ["tabs"],
+    "host_permissions": ["*://*.youtube.com/*"],
     "content_scripts": [
         {
-            "matches": [
-                "*://*.youtube.com/*"
-            ],
-            "js": [
-                "background.js"
-            ]
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["background.js"]
         }
     ],
     "icons": {
