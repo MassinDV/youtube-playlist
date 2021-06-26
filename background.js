@@ -1,6 +1,6 @@
 function updateUrls() {
     if (document.location.pathname === '/playlist') {
-        console.log('start updating');
+        console.log('%c youtube-playlist: start updating', 'color: green;');
 
         const listName = new URLSearchParams(document.location.search).get('list');
 
@@ -8,10 +8,14 @@ function updateUrls() {
             item.href = item.href.split(`list=${listName}`)[0];
         });
 
-        console.log('finish updating');
+        console.log('%c youtube-playlist: finish updating', 'color: green;');
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    setInterval(() => updateUrls(), 10000);
-});
+window.onload = () => {
+    updateUrls();
+
+    const intervalID = setInterval(() => updateUrls(), 10000);
+
+    console.log(`%c youtube-playlist: intervalID = ${intervalID}`, 'color: green;');
+};
