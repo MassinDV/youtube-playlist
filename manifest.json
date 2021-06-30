@@ -2,7 +2,7 @@
     "name": "YouTube Playlist",
     "action": {},
     "manifest_version": 3,
-    "version": "0.1",
+    "version": "0.0.1",
     "description": "update videos url in a playlist to open a video without the playlist",
     "permissions": ["tabs"],
     "host_permissions": ["*://*.youtube.com/*"],
